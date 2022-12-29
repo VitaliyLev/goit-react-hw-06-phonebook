@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const List = styled.ol`
+  height: 200px;
+  overflow-x: auto;
+`;
 export const Item = styled.li`
   :not(:last-child) {
     margin-bottom: 10px;
