@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const List = styled.ul``;
 export const Item = styled.li`
   :not(:last-child) {
     margin-bottom: 10px;
   }
-  list-style: auto;
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Button = styled.button`
@@ -15,7 +15,6 @@ export const Button = styled.button`
   background-color: white;
   cursor: pointer;
   font-size: 15px;
-  margin-left: 130px;
   :not(:last-child) {
     margin-right: 10px;
   }

@@ -17,13 +17,13 @@ export function ContactList() {
   };
 
   return (
-    <ul>
+    <ol>
       {filterContactByName().map(({ name, number, id }) => (
         <Item key={id}>
           {name}: {number}
           <Button onClick={() => dispatch(deleteContact(id))}>Delete</Button>
         </Item>
       ))}
-    </ul>
+    </ol>
   );
 }
