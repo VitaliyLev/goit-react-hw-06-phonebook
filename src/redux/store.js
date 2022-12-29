@@ -15,10 +15,10 @@ import {
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-
 const persistConfig = {
   key: 'contacts',
   storage,
+  whitelist: ['contacts'],
 }
 
 const rootReducer = combineReducers({
@@ -31,6 +31,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
+  // reducer: {
+  //   contacts:persistedReducer,
+  //   filter:filterReducer,
+  // },
 
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
